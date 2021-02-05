@@ -1,0 +1,75 @@
+{
+  "name":"polar",
+  "cacheLocation":"../s3",
+  "localOnly":false,
+  "showProgress":true,
+  "bucket":"uvic-bcwave",
+  "nca": {
+    "metadata":{
+      "title":"polar",
+      "spatial":{"x":"lon","y":"lat","elem":"elem","dim":"nnode"},
+      "temporal":{"time":"time","dim":"ntime"},
+    },
+    "dimensions" : {"npe":3,"nelem":1403956,"nnode":764300,"nstation":28,"ntime":6049},
+    "groups":{
+      "elem":{"dimensions":["nelem","npe"],"variables":{
+          "elem":{"type":"i4", "units":"" ,"standard_name":"elements" ,"long_name":"elements"}
+        }
+      },
+      "time":{"dimensions":["ntime"],"variables":{
+          "time":{"type":"f8", "units":"hours since 1970-01-01 00:00:00.0","calendar":"gregorian" ,"standard_name":"Datetime" ,"long_name":"Datetime"}
+        }
+      },
+      "nodes":{"dimensions":["nnode"],"variables":{
+          "lat":{"type":"f8", "units":"degrees_north" ,"standard_name":"Latitude" ,"long_name":"Latitude"},
+          "lon":{"type":"f8", "units":"degrees_east" ,"standard_name":"Longitude" ,"long_name":"Longitude"},
+          "bed":{"type":"f4", "units":"m" ,"standard_name":"Bathymetry" ,"long_name":"Bathymetry, m (MSL)"}
+        }
+      },
+      "s":{"dimensions":["ntime","nnode"],"variables":{
+          "u": {
+            "type":"f4",
+            "units": "m/s", 
+            "standard name": "U Velocity", 
+            "long name": "U Velocity, m/s",
+            "slf name":"VELOCITY U"
+          },
+          "v": {
+            "type":"f4",
+            "units": "m/s", 
+            "standard name": "V Velocity", 
+            "long name": "V Velocity, m/s",
+            "slf name":"VELOCITY V"
+          },
+          "fs": {
+            "type":"f4",
+            "units": "m", 
+            "standard name": "Free Surface Elevation", 
+            "long name": "Free Surface Elevation (m)",
+            "slf name":"FREE SURFACE"
+          }}},
+      "t":{"dimensions":["nnode","ntime"],"variables":{
+          "u": {
+            "type":"f4",
+            "units": "m/s", 
+            "standard name": "U Velocity", 
+            "long name": "U Velocity, m/s",
+            "slf name":"VELOCITY U"
+          },
+          "v": {
+            "type":"f4",
+            "units": "m/s", 
+            "standard name": "V Velocity", 
+            "long name": "V Velocity, m/s",
+            "slf name":"VELOCITY V"
+          },
+          "fs": {
+            "type":"f4",
+            "units": "m", 
+            "standard name": "Free Surface Elevation", 
+            "long name": "Free Surface Elevation (m)",
+            "slf name":"FREE SURFACE"
+          }}},
+    }
+  }
+}

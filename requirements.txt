@@ -1,0 +1,6 @@
+pandas
+pytest
+tqdm
+regex
+netCDF4
+numpy
